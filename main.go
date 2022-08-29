@@ -76,7 +76,14 @@ func main() {
 
 			// if enough utxos, then split
 			if len(addressUtxos) >= utxoCount {
-				//TODO: only send the count number, even if more
+				// only send the count number, even if more
+				utxoToSend := make([]blockfrost.AddressUTXO, 0)
+				if len(addressUtxos) > utxoCount {
+					utxoToSend = append(utxoToSend, addressUtxos[0:utxoCount]...)
+				} else {
+					utxoToSend = append(utxoToSend, addressUtxos...)
+				}
+
 				err = SplitUtxos(addressUtxos, splitLowerAddress, splitHigherAddress, api)
 				if err != nil {
 					logrus.WithError(err).Error("Error building tx")
