@@ -31,13 +31,11 @@ cardano-cli address build --payment-verification-key-file keys/payment.vkey --ou
 # Address to monitor
 MONITOR_ADDRESS=
 # How many utxo to accumulate before splitting
-MONITOR_ADDRESS_UTXO_COUNT=10
+UTXO_COUNT_SPLIT=
 # API Key for blockfrost
 BLOCKFROST_PROJECT_ID=
 # Send 20% to this address
 SPLIT_LOWER_ADDRESS=
 # Send 80% to this address
 SPLIT_HIGHER_ADDRESS=
-# How many UTXOs to accumulate before sending
-UTXO_COUNT_SPLIT=
 ```
