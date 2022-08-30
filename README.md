@@ -17,7 +17,7 @@ cardano-cli address key-gen --verification-key-file keys/payment.vkey --signing-
 cardano-cli address build --payment-verification-key-file keys/payment.vkey --out-file keys/payment.addr --mainnet
 ```
 
-*NOTE: BACKUP THE PAYMENT.VKEY, without this the funds will be lost forever.
+*NOTE: BACKUP THE PAYMENT.SKEY, without this the funds will be lost forever.
 
 2. Build program by running `go build`
 
